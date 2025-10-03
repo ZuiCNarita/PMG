@@ -260,7 +260,7 @@ Diff_mean_final <- means_modified["Difference"]
 # Calculate PM 
 PM_final <- NA
 if (!is.na(TE_mean_final) && TE_mean_final != 0 && !is.na(TIE_mean_final) && !is.na(Diff_mean_final)) {
-  PM_final <- (TIE_mean_final + Diff_mean_final) / TE_mean_final # As Diff will be near zero, this is effectively TIE/TE
+  PM_final <- (TIE_mean_final + Diff_mean_final) / TE_mean_final 
 }
 
 # Print final results for point estimates
@@ -268,5 +268,5 @@ print(paste("TE (Total Effect of 'girl'):", TE_mean_final))
 print(paste("OE (IDE + TIE):", OE_mean_final)) 
 print(paste("IDE (Direct Effect):", IDE_mean_final))
 print(paste("TIE (Total Indirect Effect via wishsub, desirethin, lonely):", TIE_mean_final))
-print(paste("Difference (TE - OE):", Diff_mean_final)) # This should be numerically close to zero
+print(paste("Difference (TE - OE):", Diff_mean_final))
 print(paste("PM (Proportion Mediated, as defined):", PM_final))
